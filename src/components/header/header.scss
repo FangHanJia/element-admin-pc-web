@@ -1,0 +1,53 @@
+%li-flex{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+$i:24px;
+.fhj_header{
+    background: #242F42;
+    color:#fff;
+    display:flex;
+    justify-content: space-between;
+    padding-left:10px;
+    padding-right:50px;
+    .header_title{
+        display:flex;
+        height: 70px;
+        li{
+            @extend %li-flex;
+            margin:0 10px;
+            i{
+                font-size: $i;
+            }
+            p{
+                font-size: $i;
+            }
+        }
+    }
+    .user_info{
+        display:flex;
+        height: 70px;
+        li{
+            @extend %li-flex;
+            margin-left:10px;
+            i{
+                font-size: $i;
+            }
+            .icon_full_screen{
+                transform: rotate(45deg);
+            }
+            .user_box{
+                width: 46px;
+                height:46px;
+                border:1px solid #242F42;
+                border-radius: 23px;
+                overflow: hidden;
+            }
+            .admin_info{
+                color:#fff;
+            }
+        }
+        
+    }
+}

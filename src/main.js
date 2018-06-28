@@ -9,6 +9,8 @@ Vue.use(ElementUI);
 // 引入路由注册表
 import router from './router/router.js';
 
+// 引入公共样式
+import './assets/commonCss/reset.css';
 
 new Vue({
   el: '#app',
