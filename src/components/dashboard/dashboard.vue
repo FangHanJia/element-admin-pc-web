@@ -1,6 +1,6 @@
 <template>
     <div class="fhj_dashboard">
-        仪表盘
+        仪表盘，测试
     </div>
 </template>
 <script>
