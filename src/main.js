@@ -12,8 +12,11 @@ import router from './router/router.js';
 // 引入公共样式
 import './assets/commonCss/reset.css';
 
+// 引入store
+import store from './vuex/store.js';
 new Vue({
   el: '#app',
   router,
+  store,
   render: h => h(App)
 })

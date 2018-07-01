@@ -1,7 +1,7 @@
 <template>
     <div class="fhj_header">
         <ul class="header_title">
-            <li>
+            <li @click="collapseChage">
                 <i class="el-icon-menu"></i>
             </li>
             <li>
@@ -39,11 +39,13 @@
 </template>
 <script>
     import './header.scss';
+    import bus from '../common/bus.js';
     export default {
         data(){
             return {
                 defaultImg:'./src/assets/img/admin.png',
-                userName:''
+                userName:'',
+                collapse: false,
             }
         },
         mounted(){
@@ -62,6 +64,12 @@
                 // 移除本地存储
                 window.localStorage.removeItem('ss_username');
                 this.$router.push('/login');
+            },
+            // 侧边栏折叠
+            collapseChage(){
+                this.collapse = !this.collapse;
+                bus.$emit('collapse', this.collapse);
+                
             }
         }
     }
